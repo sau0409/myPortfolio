@@ -2,12 +2,34 @@
 
 let svgArrowRight = document.getElementById("svgArrowRight");
 let svgArrowLeft = document.getElementById("svgArrowLeft");
+let svgHeader = document.getElementById("svgHeader");
+let headerBtnclicked = false;
 let leftArrowclicked = false;
 let rightArrowclicked = false;
 let homeBox2 = document.querySelector(".home-box-2");
 let homeBox1 = document.querySelector(".home-box-1");
 let arrowLeft = document.querySelector(".svg-arrow-left");
 let arrowRight = document.querySelector(".svg-arrow-right");
+let headerBtn = document.querySelector(".header");
+
+
+svgHeader.addEventListener("click", ()=> {
+
+  console.log("Hi");
+
+  
+
+  if(!headerBtnclicked) {
+    headerBtn.classList.add("header-expand");
+    headerBtnclicked = true;
+  }
+  else {
+    headerBtn.classList.remove("header-expand");
+    headerBtnclicked = false;
+  }
+
+});
+
 
 svgArrowLeft.addEventListener("click", () => {
 

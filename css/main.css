@@ -2,6 +2,71 @@ html {
   font-size: 1vw;
 }
 
+header {
+  padding: 0;
+  margin: 0;
+  top: 0;
+  right: 1vw;
+  position: fixed;
+  z-index: 5;
+  background-color: #E5E5E5;
+  width: 0vw;
+  height: 0vw;
+  border-bottom-left-radius: 100%;
+  -webkit-transition-property: width, height;
+  transition-property: width, height;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+}
+
+.header-expand {
+  width: 30vw;
+  height: 25vw;
+}
+
+.header-svg {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.header-svg:hover {
+  color: yellow;
+  width: 3rem;
+  height: 3rem;
+}
+
+li a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: #063986;
+}
+
+ul {
+  list-style-type: none;
+  position: relative;
+}
+
+.li-about {
+  position: absolute;
+}
+
+.li-projects {
+  position: absolute;
+  padding-top: 8rem;
+  padding-left: 4rem;
+}
+
+.li-contact {
+  position: absolute;
+  padding-top: 16rem;
+  padding-left: 12rem;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -45,13 +110,13 @@ section {
 
 #svgArrowRight {
   position: absolute;
-  top: 2vh;
+  top: 5vh;
   right: 1vw;
 }
 
 #svgArrowLeft {
   position: absolute;
-  top: 2vh;
+  top: 5vh;
   left: 1vw;
 }
 
@@ -197,6 +262,10 @@ section {
 @media (max-width: 600px) {
   html {
     font-size: 2vw;
+  }
+  .header-expand {
+    width: 30vh;
+    height: 25vh;
   }
 }
 /*# sourceMappingURL=main.css.map */
