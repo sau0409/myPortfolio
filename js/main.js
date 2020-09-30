@@ -1,46 +1,73 @@
 // read the background change
 
-var svgArrowRight = document.getElementById("svgArrowRight");
-var svgArrowLeft = document.getElementById("svgArrowLeft");
+let svgArrowRight = document.getElementById("svgArrowRight");
+let svgArrowLeft = document.getElementById("svgArrowLeft");
+let leftArrowclicked = false;
+let rightArrowclicked = false;
+let homeBox2 = document.querySelector(".home-box-2");
+let homeBox1 = document.querySelector(".home-box-1");
+let arrowLeft = document.querySelector(".svg-arrow-left");
+let arrowRight = document.querySelector(".svg-arrow-right");
 
 svgArrowLeft.addEventListener("click", () => {
 
-    /* var text = document.querySelectorAll(".home-text")
-     text.forEach((el, index) => {
+  /* let text = document.querySelectorAll(".home-text")
+   text.forEach((el, index) => {
 
-         el.setAttribute("style", `
-         color: #363636;
-       `);
-     });*/
+       el.setAttribute("style", `
+       color: #363636;
+     `);
+   });*/
 
-    var homeBox1 = document.querySelector(".home-box-1");
+  if (!leftArrowclicked) {
     homeBox1.classList.add("home-box-compress");
+    arrowLeft.setAttribute("style", `
+     transform: rotate(180deg);
+    `)
+    leftArrowclicked = true;
+  } else {
+    homeBox1.classList.remove("home-box-compress");
+    arrowLeft.setAttribute("style", `
+       transform: rotate(360deg);
+      `)
+    leftArrowclicked = false;
+  }
 
 });
 
+
 svgArrowRight.addEventListener("click", () => {
 
-    /*var text = document.querySelectorAll(".home-text");
-    text.forEach((el, index) => {
+  /*let text = document.querySelectorAll(".home-text");
+  text.forEach((el, index) => {
 
-        el.setAttribute("style", `
-        color: #ffffff;
-      `);
-    });
+      el.setAttribute("style", `
+      color: #ffffff;
+    `);
+  });
 
-    var homeSection = document.querySelector(".home");
-    homeSection.setAttribute("style", `
-    background-image: linear-gradient(to right, #363636 50%, #363636 50%);
-    `);*/
-    var homeBox2 = document.querySelector(".home-box-2");
+  let homeSection = document.querySelector(".home");
+  homeSection.setAttribute("style", `
+  background-image: linear-gradient(to right, #363636 50%, #363636 50%);
+  `);*/
+
+
+  if (!rightArrowclicked) {
     homeBox2.setAttribute("style", `
     width: auto;
     `)
-    var homeBox1 = document.querySelector(".home-box-1");
     homeBox1.classList.add("home-box-extend");
+    arrowRight.setAttribute("style", `
+     transform: rotate(180deg);
+    `)
+    rightArrowclicked = true;
 
-
-
-
+  } else {
+    homeBox1.classList.remove("home-box-extend");
+    arrowRight.setAttribute("style", `
+     transform: rotate(360deg);
+    `)
+    rightArrowclicked = false;
+  }
 
 });
