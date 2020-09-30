@@ -33,13 +33,13 @@ svgHeader.addEventListener("click", ()=> {
 
 svgArrowLeft.addEventListener("click", () => {
 
-  /* let text = document.querySelectorAll(".home-text")
+  let text = document.querySelectorAll(".home-text")
    text.forEach((el, index) => {
 
        el.setAttribute("style", `
        color: #363636;
      `);
-   });*/
+   });
 
   if (!leftArrowclicked) {
     homeBox1.classList.add("home-box-compress");
@@ -60,14 +60,14 @@ svgArrowLeft.addEventListener("click", () => {
 
 svgArrowRight.addEventListener("click", () => {
 
-  /*let text = document.querySelectorAll(".home-text");
+  let text = document.querySelectorAll(".home-text");
   text.forEach((el, index) => {
 
       el.setAttribute("style", `
       color: #ffffff;
     `);
   });
-
+/*
   let homeSection = document.querySelector(".home");
   homeSection.setAttribute("style", `
   background-image: linear-gradient(to right, #363636 50%, #363636 50%);

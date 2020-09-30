@@ -233,6 +233,9 @@ section {
 }
 
 .home-text-div {
+  position: absolute;
+  top: 30%;
+  left: 31%;
   padding: 2rem;
 }
 
