@@ -1,0 +1,186 @@
+$font-color-white: #ffffff;
+$font-color-dark: #363636;
+
+
+html {
+    font-size: 1vw;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mitr', sans-serif;
+}
+
+
+
+main {
+    height: 100vh;
+    scroll-snap-type: y;
+    overflow-y: scroll;
+}
+
+section {
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+.home {
+    display: flex;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.home-box-1 {
+    width: 50vw;
+    height: 100%;
+    background-color: $font-color-dark;
+    position: relative;
+    transition-duration: 500ms;
+    transition-property: width;
+    transition-timing-function: ease-out;
+}
+
+#svgArrowRight {
+    position: absolute;
+    top: 2vh;
+    right: 1vw;
+
+}
+
+#svgArrowLeft {
+    position: absolute;
+    top: 2vh;
+    left: 1vw;
+
+}
+
+.home-box-extend {
+    width: 100vw;
+}
+
+.home-box-compress {
+    width: 0vw;
+}
+
+
+
+.home-box-2 {
+    width: auto;
+    height: 100%;
+    background-color: $font-color-white;
+    position: relative;
+    transition-duration: 500ms;
+    transition-property: width;
+    transition-timing-function: ease-out;
+}
+
+
+
+.home-bg-chg {
+    position: absolute;
+    top: 0;
+    display: flex;
+}
+
+.svg-arrow-left,
+.svg-arrow-right {
+    cursor: pointer;
+    animation-name: fadeOut;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    width: 2.5rem;
+    height: 2.5rem;
+
+}
+
+@keyframes fadeOut {
+    0% {
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+
+    20% {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    40% {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+
+    60% {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+
+    80% {
+        padding-left: 4px;
+        padding-right: 4px;
+
+    }
+
+    100% {
+        padding-left: 2px;
+        padding-right: 2px;
+
+    }
+}
+
+
+
+.about {
+    background-color: bisque;
+}
+
+.services {
+    background-color: chartreuse;
+}
+
+.projects {
+    background-color: cyan;
+}
+
+.contact {
+    background-color: darkorange;
+}
+
+.home-text-div {
+    padding: 2rem;
+}
+
+.home-text1 {
+    font-size: 5rem;
+}
+
+.home-text2 {
+    font-size: 3rem;
+}
+
+.home-text3 {
+    font-size: 3rem;
+}
+
+.home-text2-1,
+.home-text3-1,
+.home-text1 {
+
+    color: $font-color-white;
+}
+
+.home-text2-2,
+.home-text3-2 {
+
+    color: $font-color-dark;
+}
+
+
+@media (max-width: 600px) {
+
+    html {
+        font-size: 2vw;
+    }
+
+}
