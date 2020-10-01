@@ -6,6 +6,14 @@ html {
     font-size: 1vw;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    box-sizing: border-box;
+    font-family: 'Mitr', sans-serif;
+}
+
 header {
     padding: 0;
     margin: 0;
@@ -31,8 +39,8 @@ header {
     position: absolute;
     right: 0;
     cursor: pointer;
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
     transform: rotate(180deg);
 }
 
@@ -69,25 +77,23 @@ ul {
     padding-left: 12rem;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Mitr', sans-serif;
-}
-
 
 
 main {
     height: 100vh;
     scroll-snap-type: y;
     overflow-y: scroll;
+    padding: 0;
+    margin: 0;
 }
 
 section {
     height: 100vh;
     scroll-snap-align: start;
 }
+
+/*home
+ section*/
 
 .home {
     display: flex;
@@ -97,7 +103,7 @@ section {
 
 .home-box-1 {
     width: 50vw;
-    height: 100%;
+    height: 100vh;
     background-color: $font-color-dark;
     position: relative;
     transition-duration: 500ms;
@@ -131,7 +137,7 @@ section {
 
 .home-box-2 {
     width: auto;
-    height: 100%;
+    height: 100vh;
     background-color: $font-color-white;
     position: relative;
     transition-duration: 500ms;
@@ -192,26 +198,6 @@ section {
     }
 }
 
-
-
-
-
-.about {
-    background-color: bisque;
-}
-
-.services {
-    background-color: chartreuse;
-}
-
-.projects {
-    background-color: cyan;
-}
-
-.contact {
-    background-color: darkorange;
-}
-
 .home-text-div {
     position: absolute;
     top: 30%;
@@ -223,13 +209,17 @@ section {
     font-size: 5rem;
 }
 
+
+
 .home-text2 {
     font-size: 3rem;
 }
 
+
 .home-text3 {
     font-size: 3rem;
 }
+
 
 .home-text2-1,
 .home-text3-1,
@@ -243,6 +233,30 @@ section {
 
     color: $font-color-dark;
 }
+
+/*about
+ section*/
+
+.about {
+    background-color: bisque;
+}
+
+/*projects
+ section*/
+
+.projects {
+    background-color: cyan;
+}
+
+/*contact
+ section*/
+
+.contact {
+    background-color: darkorange;
+}
+
+
+
 
 
 @media (max-width: 600px) {

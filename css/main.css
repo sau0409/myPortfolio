@@ -2,6 +2,15 @@ html {
   font-size: 1vw;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Mitr', sans-serif;
+}
+
 header {
   padding: 0;
   margin: 0;
@@ -28,8 +37,8 @@ header {
   position: absolute;
   right: 0;
   cursor: pointer;
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
@@ -67,19 +76,13 @@ ul {
   padding-left: 12rem;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: 'Mitr', sans-serif;
-}
-
 main {
   height: 100vh;
   -ms-scroll-snap-type: y;
       scroll-snap-type: y;
   overflow-y: scroll;
+  padding: 0;
+  margin: 0;
 }
 
 section {
@@ -87,6 +90,8 @@ section {
   scroll-snap-align: start;
 }
 
+/*home
+ section*/
 .home {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -97,7 +102,7 @@ section {
 
 .home-box-1 {
   width: 50vw;
-  height: 100%;
+  height: 100vh;
   background-color: #363636;
   position: relative;
   -webkit-transition-duration: 500ms;
@@ -130,7 +135,7 @@ section {
 
 .home-box-2 {
   width: auto;
-  height: 100%;
+  height: 100vh;
   background-color: #ffffff;
   position: relative;
   -webkit-transition-duration: 500ms;
@@ -216,22 +221,6 @@ section {
   }
 }
 
-.about {
-  background-color: bisque;
-}
-
-.services {
-  background-color: chartreuse;
-}
-
-.projects {
-  background-color: cyan;
-}
-
-.contact {
-  background-color: darkorange;
-}
-
 .home-text-div {
   position: absolute;
   top: 30%;
@@ -260,6 +249,24 @@ section {
 .home-text2-2,
 .home-text3-2 {
   color: #363636;
+}
+
+/*about
+ section*/
+.about {
+  background-color: bisque;
+}
+
+/*projects
+ section*/
+.projects {
+  background-color: cyan;
+}
+
+/*contact
+ section*/
+.contact {
+  background-color: darkorange;
 }
 
 @media (max-width: 600px) {
